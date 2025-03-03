@@ -30,5 +30,10 @@ class TestStringCalculator < Minitest::Test
     assert_equal 15, StringCalculator.add("//;\n5;10")
   end
 
-  
+  def test_negative_numbers
+    assert_raises(RuntimeError, "negative numbers not allowed") { 
+      StringCalculator.add("-1,2") 
+    }
+  end
+
 end

@@ -5,7 +5,7 @@ class StringCalculator
     p array_in_numbers
    return 0 if array_in_numbers.nil?
     if array_in_numbers.include?("-")
-      return "negative numbers not allowed"
+      raise "negative numbers not allowed"
     else
       return array_in_numbers.map{|num| num.to_i}.sum
    end
